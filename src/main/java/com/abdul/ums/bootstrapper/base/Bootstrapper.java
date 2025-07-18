@@ -1,4 +1,4 @@
-package com.abdul.ums.bootstrapper;
+package com.abdul.ums.bootstrapper.base;
 
 public interface Bootstrapper<T> {
 

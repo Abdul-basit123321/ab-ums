@@ -1,5 +1,6 @@
 package com.abdul.ums.bootstrapper;
 
+import com.abdul.ums.bootstrapper.base.Bootstrapper;
 import com.abdul.ums.entity.Role;
 import com.abdul.ums.enums.RoleEnum;
 import com.abdul.ums.repository.RoleRepository;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class RoleBootstrapper implements Bootstrapper<List<Role>>{
+public class RoleBootstrapper implements Bootstrapper<List<Role>> {
 
     private final RoleRepository roleRepository;
 

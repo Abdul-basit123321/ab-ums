@@ -1,8 +1,10 @@
 package com.abdul.ums.entity;
 
+import com.abdul.ums.entity.base.BasicAuditable;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.Set;
 
 @Data

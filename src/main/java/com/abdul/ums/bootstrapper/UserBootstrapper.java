@@ -1,16 +1,15 @@
 package com.abdul.ums.bootstrapper;
 
+import com.abdul.ums.bootstrapper.base.Bootstrapper;
 import com.abdul.ums.entity.Role;
 import com.abdul.ums.entity.User;
 import com.abdul.ums.enums.RoleEnum;
 import com.abdul.ums.repository.RoleRepository;
 import com.abdul.ums.repository.UserRepository;
-import com.abdul.ums.utils.UtilMethods;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
