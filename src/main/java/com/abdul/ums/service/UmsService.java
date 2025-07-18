@@ -1,4 +1,4 @@
 package com.abdul.ums.service;
 
-public interface UserService {
+public interface UmsService {
 }
