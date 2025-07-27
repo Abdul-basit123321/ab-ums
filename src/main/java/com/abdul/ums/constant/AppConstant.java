@@ -7,4 +7,7 @@ public class AppConstant {
 
     public static String NO_USER_FOUND_CODE = "9991";
     public static String NO_USER_FOUND_MESSAGE = "No user found";
+    public static String USER_ALREADY_EXIST_CODE = "9992";
+    public static String USER_ALREADY_EXIST_MESSAGE = "User Already Exists";
+
 }

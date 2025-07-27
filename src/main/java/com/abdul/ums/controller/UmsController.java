@@ -1,14 +1,12 @@
 package com.abdul.ums.controller;
 
 import com.abdul.ums.dto.UserDto;
+import com.abdul.ums.dto.UserRequest;
 import com.abdul.ums.model.APIResponse;
 import com.abdul.ums.service.UmsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,10 +20,6 @@ public class UmsController {
     private final UmsService umsService;
 
     //Admins only tasks
-     // -- create user
-     // -- Read user
-     // -- Update user
-     // -- Delete user
      // -- Assign roles to users
 
     @GetMapping
@@ -33,6 +27,26 @@ public class UmsController {
         log.info("GetAllUsers called");
         return APIResponse.ok(umsService.getAllUsers());
     }
+
+    @PostMapping
+    public APIResponse<UserDto> addUser(@RequestBody UserRequest userRequest) {
+        log.info("addUser called");
+        return APIResponse.ok(umsService.addUser(userRequest));
+    }
+
+    @DeleteMapping
+    public APIResponse<UserDto> deleteUser(@RequestParam String email) {
+        log.info("deleteUser called");
+        return APIResponse.ok(umsService.deleteUser(email));
+    }
+
+    @PutMapping
+    public APIResponse<UserDto> updateUser(@RequestParam String email,@RequestParam String password,@RequestParam String name) {
+        log.info("updateUser called");
+        return APIResponse.ok(umsService.updateUser(email,password,name));
+    }
+
+
 
     //User only tasks
      // -- view own profile
