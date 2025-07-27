@@ -5,9 +5,10 @@ import com.abdul.ums.enums.RoleEnum;
 
 public class UtilMethods {
 
-    public static Role getUserRole(){
-        Role userRole = new Role();
-        userRole.setName(RoleEnum.ROLE_USER.name());
-        return userRole;
+    public static RoleEnum convertRoleToEnum(String roleName) {
+        if (roleName.equalsIgnoreCase(RoleEnum.ROLE_USER.name()))
+            return RoleEnum.ROLE_USER;
+
+        return RoleEnum.ROLE_ADMIN;
     }
 }

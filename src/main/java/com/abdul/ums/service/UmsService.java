@@ -11,4 +11,5 @@ public interface UmsService {
     UserDto addUser(UserRequest userRequest);
     UserDto deleteUser(String email);
     UserDto updateUser(String email,String password,String name);
+    UserDto updateRole(String email,List<String> roleName);
 }

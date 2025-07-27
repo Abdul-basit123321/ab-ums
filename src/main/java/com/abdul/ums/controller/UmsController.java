@@ -19,9 +19,6 @@ public class UmsController {
 
     private final UmsService umsService;
 
-    //Admins only tasks
-     // -- Assign roles to users
-
     @GetMapping
     public APIResponse<List<UserDto>> getAllUsers() {
         log.info("GetAllUsers called");
@@ -46,6 +43,11 @@ public class UmsController {
         return APIResponse.ok(umsService.updateUser(email,password,name));
     }
 
+    @PutMapping("update-role")
+    public APIResponse<UserDto> updateRole(@RequestParam String email,@RequestParam List<String> roleName) {
+        log.info("updateRole called");
+        return APIResponse.ok(umsService.updateRole(email,roleName));
+    }
 
 
     //User only tasks
