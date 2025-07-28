@@ -49,12 +49,4 @@ public class UmsController {
         return APIResponse.ok(umsService.updateRole(email,roleName));
     }
 
-
-    //User only tasks
-     // -- view own profile
-     // -- update own profile
-
-
-
-
 }
